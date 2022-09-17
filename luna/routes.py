@@ -156,4 +156,3 @@ def token_reset(token):
     return render_template("reset_with_token.html", token=token, form=form)
 
 
-    

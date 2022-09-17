@@ -2,6 +2,7 @@ from flask import Flask
 from luna.models import login_manager
 from luna.config import Config
 from luna.routes import users
+from luna.webhook import data
 from luna.instance import db, bcrypt, mail, login_manager
 
 
@@ -29,6 +30,7 @@ def create_app(config_class=Config):
 
     #Blueprint views
     app.register_blueprint(users)
+    app.register_blueprint(data)
     return app
 
 
